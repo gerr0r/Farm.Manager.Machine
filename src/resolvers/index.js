@@ -5,7 +5,7 @@ module.exports = {
     Query: {
         async getMachine(parent, args, context) {
             const { token } = context
-            if (!hasRights(token, 'admin')) throw new Error('Unauthorized')
+            // if (!hasRights(token, 'admin')) throw new Error('Unauthorized')
             return await db.Machine.findByPk(args.id)
         },
 
